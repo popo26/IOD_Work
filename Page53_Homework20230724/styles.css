@@ -1,0 +1,75 @@
+* {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+header {
+    padding: 20px 20px;
+    height: 200px;
+    background-color:blue;
+    text-align: center;
+    color:white;
+    font-size: xx-large;
+}
+
+nav ul {
+    background-color: yellow;
+    width:20%;
+    padding: 40px 0 60px 40px;
+    position:relative;
+}
+
+nav li {
+list-style-type: none;
+}
+
+/* article {
+    position: absolute;   
+ 
+    width: 80%;
+    left: 300px;
+    top:46%;
+    padding: 20px;
+    background-image:url("https://media.giphy.com/media/u01ioCe6G8URG/giphy.gif");
+    background-repeat: no-repeat;
+} */
+
+article {
+    background-image:url("https://media.giphy.com/media/u01ioCe6G8URG/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    padding: 20px;
+    margin: 6px 0 16px;
+    
+    
+}
+
+input[type=submit]{
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+
+
+.container {
+   
+    padding: 50px;
+    background-color: blanchedalmond;
+}
+
+footer {
+    background-color: blue;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    font-size: small;
+
+}
+
+
+

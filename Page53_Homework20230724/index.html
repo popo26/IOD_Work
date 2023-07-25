@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page title</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="header">Header</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <article>
+        <h2>Article heading</h2>
+        <p>Paragraph....</p>
+        <a href="https:www.google.com">More information...</a>
+      </article>
+      <aside id="aside">
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">Article 1</a></li>
+          <li><a href="#">Article 2</a></li>
+        </ul>
+      </aside>
+    </section>
+    <section>
+      <div class="container">
+        <form action="#">
+          <label for="fname">First name: </label>
+          <input type="text" id="fname" name="fname" />
+          <label for="lname">Last name: </label>
+          <input type="text" id="lname" name="lname" />
+          <label type="address">Address: </label>
+          <textarea
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+          ></textarea>
+          <input onclick="orderNow()" type="submit" value="Submit" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>@Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+  </body>
+
+  <script>
+    document.getElementById("header").innerHTML = "Hello! Javascript";
+    document.getElementById("aside").style.backgroundColor = "green";
+
+    function orderNow() {
+      alert("Your Order will be shipped!");
+    }
+  </script>
+</html>
