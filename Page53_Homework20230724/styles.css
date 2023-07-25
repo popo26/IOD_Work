@@ -28,7 +28,7 @@ article {
   position:absolute;
   display:inline-block;
   top: 240px;
-  left:500px;
+  left:700px;
 }
 
 img {
@@ -49,8 +49,7 @@ input[type=submit]{
     padding: 10px;
     background-color: blanchedalmond;
     height:360px;
-    width:40%;
-    
+    width:40%;  
 }
 
 footer {
