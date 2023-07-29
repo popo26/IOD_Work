@@ -1,0 +1,15 @@
+{
+  "name": "exampleinit",
+  "version": "1.0.0",
+  "description": "This is an example of nodejs project",
+  "main": "server.js",
+  "scripts": {
+    "test": "node servertest.js",
+    "start": "node server.js"
+  },
+  "author": "Ai",
+  "license": "MIT",
+  "dependencies": {
+    "sequelize": "^6.32.1"
+  }
+}
