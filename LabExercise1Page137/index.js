@@ -6,12 +6,21 @@
 // The user should be able to use different dice, such as a D6 or a D10
 // (number of faces).
 
+let pickNumber = 0;
 
-function rollDice(num){
-    console.log(Math.floor(Math.random() * num) + 1);
+function updateFaceDiceNum(){
+    pickNumber = Math.floor(Math.random() * pickNumber) + 1;
+    document.getElementById("diceFaceNum").innerHTML = "Your dice is " + pickNumber;
 }
 
-rollDice(10);
+function userChoice(number){
+ pickNumber = number;
+ updateFaceDiceNum();
+}
+
+
+
+
 
 
 

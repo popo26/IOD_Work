@@ -1,0 +1,37 @@
+
+
+*{
+    text-align: center;
+}
+
+body {
+    background: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1 {
+    color: red;
+}
+
+p {
+    color: yellow;
+}
+
+.bg {
+    padding-top: 10rem;
+}
+
+button {
+    background-color: yellow;
+    
+    font-size: 50px;
+    font-weight: bolder;
+    border-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    margin:20px;
+}
+
