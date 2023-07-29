@@ -2,30 +2,36 @@
 
 *{
     text-align: center;
+    margin:0;
 }
 
 body {
-    background: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");
+    background: url("https://media.giphy.com/media/f73urdknsWliIEZiDw/giphy.gif");
     background-repeat: no-repeat;
     background-size: cover;
     
 }
 
-h1 {
-    color: red;
+body {
+    font-family: monospace;
 }
 
 p {
     color: yellow;
+    font-size:1rem;
 }
 
-.bg {
-    padding-top: 10rem;
+.dice-generator {
+    padding-top:10rem;
+    font-size: 6rem;
+    color: #4E4FEB;
 }
+
 
 button {
-    background-color: yellow;
-    
+    background-color: #000000;
+    color:#EEEEEE;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 50px;
     font-weight: bolder;
     border-style: none;
@@ -33,5 +39,12 @@ button {
     border-radius: 5px;
     width: 100px;
     margin:20px;
+}
+
+#diceFaceNum {
+    padding: 6rem;
+    color:#068FFF;
+    font-size: 3rem;
+    bottom:0;
 }
 
