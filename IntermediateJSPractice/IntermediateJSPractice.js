@@ -446,3 +446,15 @@ const priceObject2 = { banana: 1, pineapple: 2, watermelon: 5 }
 const priceMap2 = new Map(Object.entries(priceObject))
 console.log(priceMap2) // Map(3) { 'banana' => 1, 'pineapple' => 2, 'watermelon' => 5 }
 console.log(priceMap2.get('banana')) // 1
+
+
+const christmas = new Date('2023&12&25'); //any separator is ok
+console.log(christmas);
+
+const boxyingDay = new Date(2023, 11, 26) //month - Jan is 0
+console.log(boxyingDay);
+console.log(boxyingDay.toLocaleDateString());
+
+const now = new Date();
+console.log(now);
+console.log(now.getTimezoneOffset());
