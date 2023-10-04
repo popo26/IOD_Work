@@ -1,0 +1,39 @@
+<html lang="en">
+  <head>
+    <title>Users</title>
+  </head>
+  <body>
+    <div>
+      <h1>Users</h1>
+      <div>
+        <ul id="list-users"></ul>
+      </div>
+      <form action="/users" method="POST">
+        <label>
+          Name of User:
+          <input type="text" name="name" id="name" />
+        </label>
+        <br />
+        <br />
+        <label>
+          Location of User:
+          <input type="text" name="location" id="location" />
+        </label>
+        <input type="submit" value="Create User" />
+      </form>
+    </div>
+  </body>
+  <script>
+    fetch("/users") //express allows to use relative path. Without Express, full URL
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.users);
+        let listUsers = document.getElementById("list-users");
+        let listUsersLiElements = "";
+        data.users.forEach((user) => {
+          listUsersLiElements += "<li>" + user.name + "</li>";
+        });
+        listUsers.innerHTML = listUsersLiElements;
+      });
+  </script>
+</html>
