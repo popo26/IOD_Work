@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e3f2fd;
+      }
+      .card {
+        padding: 10px;
+      }
+      .card-title {
+        font-weight: 600;
+        font-size: 3em;
+        padding: 0 0 10px 0;
+      }
+      .card-description {
+        font-weight: 400;
+        font-size: 2em;
+      }
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  </head>
+  <body>
+    <iconify-icon icon="material-symbols:10k"></iconify-icon>
+    <template id="card-template">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"></div>
+          <div class="card-text"></div>
+        </div>
+      </div>
+    </template>
+    <div id="card-list"></div>
+    <!-- <button onclick="addCard()">Add Card</button> -->
+    <script>
+      function addCard(title, body) {
+        // clone the template
+        const template = document.getElementById("card-template").content.cloneNode(true);
+        // populate the template
+        template.querySelector(".card-title").innerText = title;
+        template.querySelector(".card-text").innerText = body;
+        // include the populated template into the page
+        document.querySelector("#card-list").appendChild(template);
+      }
+      //addCard();
+
+      fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);
+            json.forEach((post) => {
+            addCard(post.title, post.body);
+        });
+    });
+
+    </script>
+  </body>
+</html>

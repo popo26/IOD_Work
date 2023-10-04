@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Charts Examples</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+  </head>
+  <body>
+    <div
+      id="productsChart"
+      style="width: 800px; height: 600px"
+    ></div>
+  </body>
+  <script>
+let myChart = echarts.init(document.getElementById('productsChart'));
+
+    fetch("https://fakestoreapi.com/products")
+    .then(response => response.json()) // transforming to json text to javascript object  (i.e., json() method)
+    .then(products => {
+        console.log(products);
+
+        //  ================ With Map ================
+        // let nbProductsPerCategory = new Map();
+        // products.forEach(product => {
+        //     //if the map doesnt contain the product category yet
+        //     if (nbProductsPerCategory.has(product.category) === false){
+        //         nbProductsPerCategory.set(product.category, 1);
+        //     } else {
+        //         nbProductsPerCategory.set(product.category, nbProductsPerCategory.get(product.category) + 1);
+        //     }
+        // });
+
+        // ================ Original Array ================
+            // let listOfAllCategories = [];
+            // products.forEach((product) => {
+            //   if (listOfAllCategories.includes(product.category) === false) {
+            //     listOfAllCategories.push(product.category);
+            //   }
+            // });
+
+   
+
+        // ================ With Array ================
+            let listOfProductPerCategory = [];
+            let count = {};
+            let typeArr = [];
+            let countArray = [];
+            products.forEach(product => {
+                listOfProductPerCategory.push(product.category)     
+            });
+            listOfProductPerCategory.forEach(element => {
+                    count[element] = (count[element] || 0) + 1;
+            });
+        for (let x in count){
+            typeArr.push(x)
+            countArray.push(count[x])
+        };
+           
+
+        myChart.setOption({
+            title: {
+                text: 'Asynchronous Loading Example'
+            },
+            tooltip: {},
+            legend: {
+                data: ['Categories']
+            },
+            xAxis: {
+                // data: Array.from(nbProductsPerCategory.keys()), /================ /With Map ================
+                data:typeArr, // ================ With Array ================
+                // data: listOfAllCategories, // ================ With original array ================
+            },
+            yAxis: {},
+            series: [
+                {
+                name: 'Categories',
+                type: 'bar',
+                // data: Array.from(nbProductsPerCategory.values()), // ================ With Map ================
+                data: countArray, // ================ With Array ================
+                // data:[2,4,24,12], // ================ With original array ================
+                },
+            ],
+            });
+        });
+  </script>
+</html>
