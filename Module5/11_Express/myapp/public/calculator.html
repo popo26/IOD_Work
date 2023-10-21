@@ -21,7 +21,7 @@
       let num2 = document.getElementById("num2").value;
 
       //sometimes you get cors error - need to add cors configuration - or works when you remove http://localhost:3000 although it's not recommended. Weird cors error came up for localhost.
-      fetch(`http://localhost:3000/calculator/add?num1=${num1}&num2=${num2}`) //express allows to use relative path. Without Express, full URL
+      fetch(`http://127.0.0.1:3000/calculator/add?num1=${num1}&num2=${num2}`) //express allows to use relative path. Without Express, full URL
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
@@ -42,7 +42,7 @@
       let num2 = document.getElementById("num2").value;
 
       fetch(
-        `http://localhost:3000/calculator/subtract?num1=${num1}&num2=${num2}`
+        `http://127.0.0.1:3000/calculator/subtract?num1=${num1}&num2=${num2}`
       ) //express allows to use relative path. Without Express, full URL
         .then((response) => response.json())
         .then((data) => {
@@ -55,7 +55,7 @@
       let num2 = document.getElementById("num2").value;
 
       fetch(
-        `http://localhost:3000/calculator/multiply?num1=${num1}&num2=${num2}`
+        `http://127.0.0.1:3000/calculator/multiply?num1=${num1}&num2=${num2}`
       ) //express allows to use relative path. Without Express, full URL
         .then((response) => response.json())
         .then((data) => {
@@ -67,7 +67,7 @@
       let num1 = document.getElementById("num1").value;
       let num2 = document.getElementById("num2").value;
 
-      fetch(`http://localhost:3000/calculator/divide?num1=${num1}&num2=${num2}`) //express allows to use relative path. Without Express, full URL
+      fetch(`http://127.0.0.1:3000/calculator/divide?num1=${num1}&num2=${num2}`) //express allows to use relative path. Without Express, full URL
         .then((response) => response.json())
         .then((data) => {
           document.getElementById("result").innerText = data.result;

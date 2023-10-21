@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator2 Example</title>
+</head>
+<body>
+    <div>
+        Result<span id="result"></span>
+    </div>
+</body>
+<script>
+    let num1 = 10;
+    let num2 = 100;
+    fetch(`http://localhost:4000/calculator2/add2?num1=${num1}&num2=${num2}`)
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('result').innerHTML = data.result;
+    })
+</script>
+</html>
