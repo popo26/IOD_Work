@@ -15,6 +15,8 @@ import MoviesList from "./components/MoviesList";
 import MoodChanger from "./components/moodChanger";
 import BirthdayTranslator from "./components/BirthdayTranslater";
 import Weather from "./components/Weather";
+import LoginForm from "./components/LoginForm";
+import ExplodingBomb from "./components/ExplodingBomb";
 
 function Welcome(props) {
   // custom Welcome component
@@ -199,6 +201,10 @@ props.children */}
       <BirthdayTranslator />
 
       <Weather />
+
+      <LoginForm/>
+
+      <ExplodingBomb />
     </>
   );
 }
